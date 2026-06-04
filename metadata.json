@@ -1,0 +1,6 @@
+{
+  "name": "Argentina National Football Team Dashboard",
+  "description": "An interactive showcase and historical archive of the Argentina national football team (la Albiceleste), featuring squads, fixtures, individual records, rivalries, and championship honors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
