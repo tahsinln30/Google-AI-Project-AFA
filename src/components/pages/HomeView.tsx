@@ -17,7 +17,8 @@ import {
   Award,
   Zap,
   BookOpen,
-  Volume2
+  Volume2,
+  Gamepad2
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -66,15 +67,21 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           <div className="flex flex-wrap gap-3.5 pt-2">
             <button
               onClick={() => onNavigate('squad')}
-              className="py-3 px-5 bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-zinc-950 font-extrabold rounded-xl text-xs sm:text-sm shadow-lg shadow-sky-500/15 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2"
+              className="py-3 px-5 bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-zinc-950 font-extrabold rounded-xl text-xs sm:text-sm shadow-lg shadow-sky-500/15 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer"
             >
               <Users className="w-4 h-4 text-zinc-950" /> Explore Squad & Records
             </button>
             <button
               onClick={() => onNavigate('tactical')}
-              className="py-3 px-5 bg-zinc-900 border border-zinc-800 text-zinc-200 font-bold rounded-xl text-xs sm:text-sm hover:bg-zinc-850 hover:text-white transition-all flex items-center gap-2"
+              className="py-3 px-5 bg-zinc-900 border border-zinc-800 text-zinc-200 font-bold rounded-xl text-xs sm:text-sm hover:bg-zinc-850 hover:text-white transition-all flex items-center gap-2 cursor-pointer"
             >
               <Zap className="w-4 h-4 text-sky-400" /> Start Starting-XI Tactical Board
+            </button>
+            <button
+              onClick={() => onNavigate('game')}
+              className="py-3 px-5 bg-amber-400/10 border border-amber-500/20 text-amber-400 hover:bg-amber-400 hover:text-zinc-950 font-bold rounded-xl text-xs sm:text-sm transition-all flex items-center gap-2 cursor-pointer"
+            >
+              <Gamepad2 className="w-4 h-4" /> Play Shootout Arcade
             </button>
           </div>
         </div>

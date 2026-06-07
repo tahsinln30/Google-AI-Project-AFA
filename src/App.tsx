@@ -10,7 +10,8 @@ import {
   Compass, 
   Sparkles,
   Zap,
-  Award
+  Award,
+  Gamepad2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -23,8 +24,9 @@ import { RivalriesView } from './components/pages/RivalriesView';
 import { TrophiesView } from './components/pages/TrophiesView';
 import { KitsView } from './components/pages/KitsView';
 import { WorldCupView } from './components/pages/WorldCupView';
+import { GameView } from './components/pages/GameView';
 
-type ViewType = 'home' | 'squad' | 'tactical' | 'fixtures' | 'rivalries' | 'trophies' | 'kits' | 'worldcup';
+type ViewType = 'home' | 'squad' | 'tactical' | 'fixtures' | 'rivalries' | 'trophies' | 'kits' | 'worldcup' | 'game';
 
 interface MenuItem {
   id: ViewType;
@@ -42,7 +44,8 @@ export default function App() {
     { id: 'squad', label: 'Squad & Records', icon: Users, color: 'text-emerald-400' },
     { id: 'tactical', label: 'Tactical Board', icon: Zap, color: 'text-amber-400' },
     { id: 'fixtures', label: 'Fixtures & Scores', icon: Calendar, color: 'text-indigo-400' },
-    { id: 'worldcup', label: 'WC 2026 Draw & Path', icon: Sparkles, color: 'text-sky-305 font-bold' },
+    { id: 'worldcup', label: 'WC 2026 Draw & Path', icon: Sparkles, color: 'text-sky-350 font-bold' },
+    { id: 'game', label: 'Shootout Arcade', icon: Gamepad2, color: 'text-amber-400 font-extrabold animate-pulse' },
     { id: 'rivalries', label: 'Rivalries Hub', icon: Flame, color: 'text-orange-400' },
     { id: 'trophies', label: 'Trophy Room', icon: Trophy, color: 'text-yellow-400' },
     { id: 'kits', label: 'Shirt History', icon: Shirt, color: 'text-pink-400' },
@@ -180,6 +183,7 @@ export default function App() {
           {activeView === 'tactical' && <TacticalBoardView />}
           {activeView === 'fixtures' && <FixturesView />}
           {activeView === 'worldcup' && <WorldCupView />}
+          {activeView === 'game' && <GameView />}
           {activeView === 'rivalries' && <RivalriesView />}
           {activeView === 'trophies' && <TrophiesView />}
           {activeView === 'kits' && <KitsView />}
